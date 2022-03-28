@@ -25,4 +25,4 @@ jobs:
       run: composer update
       
     - name: test
-      run: composer exec phpunit divisionTest.php
+      run: composer exec phpunit tests/contactsTest.php
