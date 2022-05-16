@@ -19,7 +19,7 @@ jobs:
       run: composer install 
       
     - name: install phpunit
-      run: composer require phpunit/phpunit  
+      run: composer require --dev phpunit/phpunit  
       
     - name: update composer
       run: composer update
