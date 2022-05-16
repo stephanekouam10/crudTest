@@ -1,0 +1,28 @@
+name: PHP Composer
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: install composer init
+      run: composer require
+      
+    - name: install composer
+      run: composer install 
+      
+    - name: install phpunit
+      run: composer require --dev phpunit/phpunit  
+      
+    - name: update composer
+      run: composer update
+      
+    - name: test
+      run: composer exec phpunit tests/contactsTest.php
