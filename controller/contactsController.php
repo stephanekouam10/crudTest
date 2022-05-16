@@ -80,7 +80,7 @@
                         if($pid>0){			
                             $this->list();
                         }else{
-                            echo "Somthing is wrong..., try again.";
+                            echo "Something is wrong..., try again.";
                         }
                     }else
                     {    
